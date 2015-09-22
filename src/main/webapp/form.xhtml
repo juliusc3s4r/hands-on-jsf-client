@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>	
+</h:head>
+<h:body>
+<h:form id="formNew" prependId="false">		
+	<h:outputText value="Add new" />
+	
+	<br/>
+	<br/>		
+	
+		 <h:panelGrid columns="2" cellpadding="4" style="margin:0 auto;">	 				
+			<h:outputText value="ZipCode: " />
+			<h:inputText value="#{addressView.address.zipcode}" size="25"  />	
+					
+			<h:outputText value="Address: " />
+			<h:inputText value="#{addressView.address.street}" size="30"  />
+			
+			<h:outputText value="Nº: " />
+			<h:inputText value="#{addressView.address.number}" size="30"  />
+			
+			<h:outputText value="District: " />
+			<h:inputText value="#{addressView.address.district}" size="30"  />
+			
+			<h:outputText value="Ciry: " />
+			<h:inputText value="#{addressView.address.city}" size="30"  />		  
+	  		
+	        <h:commandButton type="submit" action="#{addressView.addAddress}" value="Salvar" />	                  
+		 </h:panelGrid>
+	
+	
+	<br/>
+	<br/>
+	
+	<h:commandLink action="#{addressView.goToIndex}" value="To List"/>
+	</h:form>
+	</h:body>
+</html>

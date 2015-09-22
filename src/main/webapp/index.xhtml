@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+
+</h:head>
+<h:body>
+<h:form>
+	<h:outputText value="#{addressView.message}" />
+	<br/>
+	<br/>
+	
+	<h:commandLink action="#{addressView.goToFormAdd}" value="New Address"/>
+	
+	<br/>
+	<br/>
+	
+	<h:dataTable value="#{addressView.list}" var="address">
+
+		<h:column>			
+			<f:facet name="header">ID</f:facet>			
+			#{address.id}
+		</h:column>
+		
+		<h:column>			
+			<f:facet name="header">Street</f:facet>			
+			#{address.street}
+		</h:column>
+		
+		<h:column>			
+			<f:facet name="header">Number</f:facet>			
+			#{address.number}
+		</h:column>
+		
+		<h:column>			
+			<f:facet name="header">District</f:facet>			
+			#{address.district}
+		</h:column>
+		
+		<h:column>			
+			<f:facet name="header">City</f:facet>			
+			#{address.city}
+		</h:column>
+		
+		<h:column>			
+			<f:facet name="header">Zip Code</f:facet>			
+			#{address.zipcode}
+		</h:column>		
+	
+	</h:dataTable>
+	
+</h:form>	
+</h:body>
+</html>
